@@ -148,6 +148,7 @@ public void archiveContracts(){
                 .forEach(contrat -> contrat.setArchive(true));
     }
 
+    //SCHEDULER
     @Scheduled(fixedRate = 60000)
     @Override
     public void retrieveAndUpdateStatusContrat() {

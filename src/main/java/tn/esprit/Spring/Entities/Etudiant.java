@@ -31,7 +31,7 @@ public class Etudiant implements Serializable {
    @JsonIgnore
     private Departement departement;
 
-    @ManyToMany(mappedBy = "etudiants") //fil ManyToMany may9ala9ch nhotou mappedBy kima nhebou
+    @ManyToMany(mappedBy = "etudiants", fetch = FetchType.EAGER) //fil ManyToMany may9ala9ch nhotou mappedBy kima nhebou
     private List<Equipe> equipes;
 
     @OneToMany (mappedBy = "etudiant")
